@@ -1,0 +1,4 @@
+First Website 
+- html content was not within the body tags
+- nav tags should have been before the main tags
+- 

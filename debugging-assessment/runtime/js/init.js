@@ -68,6 +68,7 @@ var init = function (window) {
             physikz.updatePosition(body);
             physikz.updateSpace(space, physikz.hitTestRadial, rules.handleCollision);
             playerManager.hitTest(body);
+            backgroundBuilding.x = backgroundBuilding.x - 1;
         });
     }
     

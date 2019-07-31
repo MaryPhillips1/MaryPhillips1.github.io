@@ -22,21 +22,15 @@ var init = function (window) {
         physikz.addRandomVelocity(circle, canvas);
         view.addChild(circle);
         circle.push(circle);
-        
-        
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-    };
+    }
     
     
     // TODO 3 : Call the drawCircle function 5 times //
 
     // TODO 7 : Create a Loop to call drawCircle 100 times
-    for (var i = 0; i < 100; i++);
-        drawCircle();
+    for (var i = 0; i <= 100; i++){
+        drawCircle[i];
+    }
 
     view.addChild(fps);
     app.addUpdateable(fps);
@@ -46,36 +40,36 @@ var init = function (window) {
         if ( circle.x > canvas.width + circle.radius ) {
             circle.x = 0 - circle.radius;
         } else if ( circle.x < canvas.width + circle.radius ) {
-           circle.x = 0 + circle.radius;
+           circle.x = canvas.width - circle.radius;
         } if ( circle.y > canvas.height + circle.radius ) {
             circle.y = 0 - circle.radius;
         } else if ( circle.y < canvas.heigth + circle.radius ) {
-            circle.y = 0 + circle.radius;
+            circle.y = canvas.height - circle.radius;
         }
         // YOUR TODO 5 CODE ENDS HERE //////////////////////////
     }
 
     function update() {
         // TODO 4 : Update the circle's position //
-        physikz.updatePosition(circles[0]);
-        physikz.updatePosition(circles[0]);
-        physikz.updatePosition(circles[0]);
-        physikz.updatePosition(circles[0]);
-        physikz.updatePosition(circles[0]);
-        // TODO 6 : Call checkCircleBounds on your circles.
-        checkCircleBounds(circles[1]);
-        checkCircleBounds(circles[2]);
-        checkCircleBounds(circles[3]);
-        checkCircleBounds(circles[4]);
-        checkCircleBounds(circles[5]);
+        // physikz.updatePosition(circles[0]);
+        // physikz.updatePosition(circles[1]);
+        // physikz.updatePosition(circles[2]);
+        // physikz.updatePosition(circles[3]);
+        // physikz.updatePosition(circles[4]);
+        // // TODO 6 : Call checkCircleBounds on your circles.
+        // checkCircleBounds(circles[0]);
+        // checkCircleBounds(circles[1]);
+        // checkCircleBounds(circles[2]);
+        // checkCircleBounds(circles[3]);
+        // checkCircleBounds(circles[4]);
         // TODO 8 : Iterate over the array
-        /*
-        for (var i = 0; i < circles.length - 1; i++) {
-            var circle = circles[0];
+        
+        for (var i = 0; i < circles.length; i++) {
+            var circle = circles[i];
             physikz.updatePosition(circle);
             checkCircleBounds(circle);
         }
-        */
+        
     }
         
     ////////////////////////////////////////////////////////////////////
